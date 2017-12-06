@@ -14,7 +14,12 @@ GET
 
 ## **El segundo "/terminalPost" inserta un texto como subtítulos en todas las cámaras que le pertenezcan a una terminal de POS
 
-> Parámetros: "idTerminal", "inputText"
+> Parámetros: "idTerminal"
+> Contenido : HTML
+
+### Método
+
+POST
 
 
 ## **El tercero "/terminalEnd" limpia los subtítulos en pantalla de todas las cámaras hijas de una terminal de POS**
@@ -22,6 +27,9 @@ GET
 > Parámetros: "idTerminal"
 
 
+### Método
+
+GET
 
 > Los 3 servicios responden un JSON con esta forma:
 
@@ -41,5 +49,8 @@ GET
 
 > http://189.209.135.134:105/terminalEnd?idTerminal=1
 
-> http://189.209.135.134:105/terminalPost?idTerminal=1&inputText=Nueva transacción
-
+> http://189.209.135.134:105/terminalPost?idTerminal=1
+```
+  ---POST Content HTML---
+  <p> Input Text ISS POS Camera </p>
+```
